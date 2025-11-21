@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="90d59466-dec5-4d39-ad60-765fb2ea4816">
+  <producedTypes>
+    <objectType typeId="823b02f1-70e3-4067-84d3-0133a366b611" valueTypeId="a3f7e7f6-da37-4cd6-b315-885914f224c4"/>
+    <refType typeId="823131e5-4ff2-41b5-8f1e-23203842ad46" valueTypeId="db4a1fcf-06a1-43d9-98cd-3144a789b84d"/>
+    <selectionType typeId="3fc32670-a5c9-4063-bdc8-8305c5fc95dc" valueTypeId="c440a3d3-4b6d-4a89-961d-1b97a97d295d"/>
+    <listType typeId="c242ec5e-480c-4991-acab-72547bea0a1a" valueTypeId="7b49a3d9-e083-466e-a08a-92f5660aa642"/>
+    <managerType typeId="71c99a73-3544-406b-864e-aea68f9d0681" valueTypeId="8c3fea4e-3d47-4b99-970f-db7541fcd733"/>
+  </producedTypes>
+  <name>ВКМ_УведомленияТГБоту</name>
+  <synonym>
+    <key>ru</key>
+    <value>Уведомления ТГ Боту</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВКМ_УведомленияТГБоту.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ВКМ_УведомленияТГБоту.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Уведомление ТГ Боту</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Уведомления ТГ Боту</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="7b233fae-730b-46e1-ab06-d6b166ea50a8">
+    <name>ВКМ_ТекстСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст сообщения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>
