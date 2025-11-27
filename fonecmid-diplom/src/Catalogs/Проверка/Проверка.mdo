@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9acbf011-c571-40d1-a507-1a9112367061">
+  <producedTypes>
+    <objectType typeId="3a553d91-66fb-4c62-8dc8-4cb199709f6a" valueTypeId="464a0515-52ed-44c5-89ff-e1c2070ba074"/>
+    <refType typeId="b2c77974-9be4-4abd-84b6-610a355b19b5" valueTypeId="bfe6e2e0-cdcf-4707-986d-d042d6520efc"/>
+    <selectionType typeId="dbe668f4-a3cd-49bc-90dd-d402a01bd570" valueTypeId="cd57b9c0-690b-4bf2-a24f-1a881ffc3662"/>
+    <listType typeId="9a19a5f3-2dfa-489b-b943-4e28fe54e2d7" valueTypeId="6615dbab-9bfd-46a8-bbf4-ff376afd0c0b"/>
+    <managerType typeId="43c69a53-d545-4b51-a41f-8b86632057c2" valueTypeId="e75987e0-118d-4de4-a319-5dbf1fed6bd0"/>
+  </producedTypes>
+  <name>Проверка</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверка</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Проверка.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.Проверка.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>
