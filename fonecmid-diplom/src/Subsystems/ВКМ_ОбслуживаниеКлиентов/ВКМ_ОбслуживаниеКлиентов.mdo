@@ -13,4 +13,6 @@
   <content>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</content>
   <content>Constant.ВКМ_ТокенУправленияТГБотом</content>
   <content>Constant.ВКМ_ИдентификаторГруппыДляОповещения</content>
+  <content>Catalog.ВКМ_УведомленияТГБоту</content>
+  <content>ScheduledJob.ВКМ_УведомленияТГБот</content>
 </mdclass:Subsystem>
