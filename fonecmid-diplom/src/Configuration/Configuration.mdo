@@ -625,6 +625,7 @@
   <roles>Role.ЧтениеДополнительныхСведений</roles>
   <roles>Role.ЧтениеНСИ</roles>
   <roles>Role.ЧтениеУчетныхЗаписейЭлектроннойПочты</roles>
+  <roles>Role.ВКМ_ДобавлениеИзменениеОбслуживанияКлиентов</roles>
   <commonTemplates>CommonTemplate.ДанныеПечатиОбщиеРеквизиты</commonTemplates>
   <commonTemplates>CommonTemplate.ДанныеПечатиРегистрСимволов</commonTemplates>
   <commonTemplates>CommonTemplate.ИнструкцияКакВыполнитьНастройкуМакетаOfficeOpen</commonTemplates>
@@ -1113,6 +1114,8 @@
   <constants>Constant.УдалитьНастройкиВходаПользователей</constants>
   <constants>Constant.УчетнаяЗаписьДляВосстановленияПароля</constants>
   <constants>Constant.ХранитьФайлыВТомахНаДиске</constants>
+  <constants>Constant.ВКМ_ТокенУправленияТГБотом</constants>
+  <constants>Constant.ВКМ_ИдентификаторГруппыДляОповещения</constants>
   <commonForms>CommonForm.БлокировкаРаботыСВнешнимиРесурсами</commonForms>
   <commonForms>CommonForm.ВводЗначенийСпискомСФлажками</commonForms>
   <commonForms>CommonForm.Вопрос</commonForms>
@@ -1216,6 +1219,7 @@
   <catalogs>Catalog.УчетныеЗаписиЭлектроннойПочты</catalogs>
   <catalogs>Catalog.Файлы</catalogs>
   <catalogs>Catalog.Проверка</catalogs>
+  <catalogs>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</catalogs>
   <documents>Document.ЗаказПокупателя</documents>
   <documents>Document.ОплатаОтПокупателя</documents>
   <documents>Document.ОплатаПоставщику</documents>
@@ -1382,5 +1386,7 @@
   <accumulationRegisters>AccumulationRegister.ОбработкаЗаказов</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.ОстаткиТоваров</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Продажи</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</accumulationRegisters>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</chartsOfCharacteristicTypes>
 </mdclass:Configuration>

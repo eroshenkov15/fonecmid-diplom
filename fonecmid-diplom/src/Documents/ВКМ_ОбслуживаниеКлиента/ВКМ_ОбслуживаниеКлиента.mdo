@@ -33,6 +33,8 @@
   <autonumbering>true</autonumbering>
   <defaultObjectForm>Document.ВКМ_ОбслуживаниеКлиента.Form.ВКМ_ФормаДокумента</defaultObjectForm>
   <defaultListForm>Document.ВКМ_ОбслуживаниеКлиента.Form.ВКМ_ФормаСписка</defaultListForm>
+  <registerRecords>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</registerRecords>
+  <registerRecords>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="6467374b-3a08-41c4-b29d-48ccbe782a07">
