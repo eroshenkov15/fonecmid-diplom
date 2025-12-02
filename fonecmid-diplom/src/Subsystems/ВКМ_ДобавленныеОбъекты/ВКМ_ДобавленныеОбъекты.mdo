@@ -12,4 +12,17 @@
   <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</content>
   <content>Catalog.ВКМ_УведомленияТГБоту</content>
+  <content>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</content>
+  <content>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</content>
+  <content>ChartOfCalculationTypes.ВКМ_Удержания</content>
+  <content>CalculationRegister.ВКМ_ОсновныеНачисления</content>
+  <content>Catalog.ВКМ_ГрафикРаботы</content>
+  <content>InformationRegister.ВКМ_УсловияОплатыСотрудников</content>
+  <content>Document.ВКМ_НачисленияЗарплаты</content>
+  <content>Document.ВКМ_НачислениеФиксПремии</content>
+  <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
+  <content>Document.ВКМ_ВыплатаЗарплаты</content>
+  <content>Document.ВКМ_ГрафикОтпусков</content>
+  <content>Role.ВКМ_РаботаСКадрДок</content>
+  <content>InformationRegister.ВКМ_ГрафикиРаботы</content>
 </mdclass:Subsystem>

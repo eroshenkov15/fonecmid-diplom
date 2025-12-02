@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="61e0983b-5e34-486e-9b58-710a4b4b7192">
+  <producedTypes>
+    <selectionType typeId="5a4526f5-3e9e-4bea-969f-52b89acd2736" valueTypeId="0f811060-dd18-4a8c-acd6-016ca331619f"/>
+    <listType typeId="87c5031a-f198-46f5-94b4-dc578d4cb495" valueTypeId="cab3d9ab-ec9e-4d93-8b36-ac0fba3e4552"/>
+    <managerType typeId="b16f75a7-7677-4b72-9c5b-54dd2bb45db8" valueTypeId="b8e96a57-352e-4c07-87a9-ad861b9e8931"/>
+    <recordSetType typeId="a6a99713-7920-45b6-913a-0cef18e87aef" valueTypeId="094eb0c4-fc66-407a-be0b-b259b26256ef"/>
+    <recordKeyType typeId="7411a268-c179-4d64-a3e4-09fe6d2d110b" valueTypeId="a9053d91-a3c1-46c5-949b-1900dea798ee"/>
+    <recordType typeId="1997e5b8-1770-401d-9887-77adedd26da7" valueTypeId="fd665002-c656-4d4f-80ba-bff83c7a019a"/>
+  </producedTypes>
+  <name>ВКМ_УчетОтпусков</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет отпусков</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <listPresentation>
+    <key>ru</key>
+    <value>Учет отпусков</value>
+  </listPresentation>
+  <resources uuid="fb2caba4-353c-4b57-b83f-e47be28c319f">
+    <name>ВКМ_Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="43cc967e-6d46-45a4-9e3f-066ea0aeeb87">
+    <name>ВКМ_Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

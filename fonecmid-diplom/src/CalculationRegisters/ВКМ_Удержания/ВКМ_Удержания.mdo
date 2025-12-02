@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CalculationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b43ca1cb-196e-42b3-9684-eba4b2bc3063">
+  <producedTypes>
+    <selectionType typeId="e8815f10-d933-4662-81cb-2e6258f839a2" valueTypeId="bba62b80-eec1-46bd-bafc-80660a7772f0"/>
+    <listType typeId="60771898-84f7-4a15-9c56-9cf7853fd6d4" valueTypeId="91c5ae3c-7c6a-4254-aec8-925ccddd6e1a"/>
+    <managerType typeId="2768a15f-92a1-41ee-a2fd-5cc8981d3e9d" valueTypeId="5f0842cb-255e-479b-acc9-f48d14628476"/>
+    <recordSetType typeId="8b6dbc80-d304-4d53-abb6-a302cbcf79d7" valueTypeId="13c708ed-8b43-4464-92c4-1c8612822237"/>
+    <recordKeyType typeId="348dac49-40fd-454e-8323-a6f76a0f151e" valueTypeId="01111282-5708-4734-89a2-66d6c12bd9af"/>
+    <recordType typeId="5fcc2a7f-fdb2-4eef-9fd4-8cd9b8bb54d2" valueTypeId="20db81c6-01f7-4db3-ad11-25c4865d4542"/>
+    <recalcsType typeId="d1701ace-e0b3-4960-a68a-57fcbc9c64d0" valueTypeId="b8fb8715-70f6-4829-8a7d-0eb2f0691a44"/>
+  </producedTypes>
+  <name>ВКМ_Удержания</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удержания</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <periodicity>Month</periodicity>
+  <chartOfCalculationTypes>ChartOfCalculationTypes.ВКМ_Удержания</chartOfCalculationTypes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:CalculationRegister>
