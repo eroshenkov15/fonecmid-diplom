@@ -18,6 +18,9 @@
   <periodicity>Month</periodicity>
   <actionPeriod>true</actionPeriod>
   <basePeriod>true</basePeriod>
+  <schedule>InformationRegister.ВКМ_ГрафикиРаботы</schedule>
+  <scheduleValue>InformationRegister.ВКМ_ГрафикиРаботы.Resource.ВКМ_Значение</scheduleValue>
+  <scheduleDate>InformationRegister.ВКМ_ГрафикиРаботы.Dimension.ВКМ_Дата</scheduleDate>
   <chartOfCalculationTypes>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</chartOfCalculationTypes>
   <dataLockControlMode>Managed</dataLockControlMode>
   <resources uuid="37a1d8b8-b947-452e-af3f-4dad57b60325">

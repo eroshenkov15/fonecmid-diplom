@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКМ_Клиент</dataPath>
+			<field>ВКМ_Клиент</field>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКМ_Договор</dataPath>
+			<field>ВКМ_Договор</field>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКМ_ДоговорВКМ_АбонентскаяПлата</dataPath>
+			<field>ВКМ_ДоговорВКМ_АбонентскаяПлата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКМ_ДоговорВКМ_СтавкаЧаса</dataPath>
+			<field>ВКМ_ДоговорВКМ_СтавкаЧаса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОтгрузкиОборот</dataPath>
+			<field>СуммаОтгрузкиОборот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВКМ_СуммаКОплатеОборот</dataPath>
+			<field>ВКМ_СуммаКОплатеОборот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Клиент,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Договор,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Договор.ВКМ_АбонентскаяПлата,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Договор.ВКМ_СтавкаЧаса
+ПОМЕСТИТЬ ВТ_ВсеДоговора
+ИЗ
+	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты КАК ВКМ_ВыполненныеКлиентуРаботыОбороты
+СГРУППИРОВАТЬ ПО
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Клиент,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Договор,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Договор.ВКМ_АбонентскаяПлата,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Договор.ВКМ_СтавкаЧаса
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ОбработкаЗаказовОбороты.Контрагент,
+	ОбработкаЗаказовОбороты.Договор,
+	ОбработкаЗаказовОбороты.Договор.ВКМ_АбонентскаяПлата,
+	ОбработкаЗаказовОбороты.Договор.ВКМ_СтавкаЧаса
+ИЗ
+	РегистрНакопления.ОбработкаЗаказов.Обороты КАК ОбработкаЗаказовОбороты
+ГДЕ
+	ОбработкаЗаказовОбороты.Договор.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровКонтрагентов.ВКМ_Абонент)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ВсеДоговора.ВКМ_Клиент,
+	ВТ_ВсеДоговора.ВКМ_Договор,
+	ВТ_ВсеДоговора.ВКМ_ДоговорВКМ_АбонентскаяПлата,
+	ВТ_ВсеДоговора.ВКМ_ДоговорВКМ_СтавкаЧаса,
+	ОбработкаЗаказовОбороты.СуммаОтгрузкиОборот,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_СуммаКОплатеОборот
+ИЗ
+	ВТ_ВсеДоговора КАК ВТ_ВсеДоговора
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОбработкаЗаказов.Обороты КАК ОбработкаЗаказовОбороты
+		ПО ВТ_ВсеДоговора.ВКМ_Договор = ОбработкаЗаказовОбороты.СуммаОтгрузкиОборот
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты КАК ВКМ_ВыполненныеКлиентуРаботыОбороты
+		ПО ВТ_ВсеДоговора.ВКМ_Договор = ВКМ_ВыполненныеКлиентуРаботыОбороты.ВКМ_Договор</query>
+	</dataSet>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВКМ_Клиент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВКМ_Договор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВКМ_ДоговорВКМ_АбонентскаяПлата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВКМ_ДоговорВКМ_СтавкаЧаса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВКМ_СуммаКОплатеОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОтгрузкиОборот</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ВКМ_Клиент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:nil="true"/>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
